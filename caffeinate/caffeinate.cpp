@@ -45,7 +45,6 @@ int wmain(int argc, wchar_t* argv[])
     int ndx = 1;
     for (ndx; ndx < argc; ndx++)
     {
-        puts("lol");
         if (expectingTimeoutToFollow)
         {
             fail("parsing timeouts not yet implemented");
