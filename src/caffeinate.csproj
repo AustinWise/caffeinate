@@ -16,4 +16,12 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+        <!-- Dynamically link at load time -->
+        <DirectPInvoke Include="kernel32!SetThreadExecutionState" />
+        <!-- All of our dependent DLLs are in System32, so only load from there. -->
+        <LinkerArg Include="/DEPENDENTLOADFLAG:0x800" />
+    </ItemGroup>
+
+
 </Project>
